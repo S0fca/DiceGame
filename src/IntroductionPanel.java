@@ -12,7 +12,7 @@ public class IntroductionPanel extends JPanel {
     private final DiceGame game;
     private final JFrame frame;
     private int playerNumber = 1;
-    JTextArea rulesText = new JTextArea(10, 20);
+    final JTextArea rulesText = new JTextArea(10, 20);
 
     /**
      * creates the introduction panel

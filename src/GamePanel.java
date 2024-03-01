@@ -13,9 +13,9 @@ public class GamePanel {
     private final MyCanvas canvas;
     private final DiceGame game;
     private final JFrame frame;
-    final JPanel gamePanel = new JPanel();
-    JPanel tablePanel = new JPanel(new GridBagLayout());
-    JPanel panel = new JPanel(new BorderLayout());
+    private final JPanel gamePanel = new JPanel();
+    private final JPanel tablePanel = new JPanel(new GridBagLayout());
+    private final JPanel panel = new JPanel(new BorderLayout());
 
 
     public GamePanel(DiceGame game, JFrame frame) {

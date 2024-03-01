@@ -4,7 +4,7 @@ import java.util.List;
 public class DiceGame {
 
     private int numberOfPlayers = 0;
-    private final static ArrayList<Player> players = new ArrayList();
+    private final static ArrayList<Player> players = new ArrayList<>();
     private int playerOnTurn = 0;
     private String selectedGame;
     private final Dice dice = new Dice();
@@ -194,16 +194,12 @@ public class DiceGame {
 
     /**
      * if the game isn't selected it'll add tries and generate new dice numbers for new player
-     *
-     * @return if the player hasn't picked a game (picked tries)
      */
-    public boolean skipGame() {
+    public void skipGame() {
         if (!isGameSelected()) {
             dice.generateDiceNumbers();
             nextPlayer();
-            return true;
         }
-        return false;
     }
 
     /**
@@ -240,15 +236,11 @@ public class DiceGame {
 
     /**
      * checks if the player on turn has played all the games meaning the game is over
-     *
-     * @return if the game is over
      */
-    public boolean gameEnd() {
+    public void gameEnd() {
         if (getPlayerOnTurn().getMap().size() == gameNames.size()) {
             gameEnd = true;
-            return true;
         }
-        return false;
     }
 
     /**

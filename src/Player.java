@@ -6,8 +6,8 @@ public class Player {
     private final Map<String, Integer> map = new LinkedHashMap<>();
     private int points;
     private final int id;
-    private String name;
-    private final int tries = 0;
+    private final String name;
+    private int tries = 0;
 
     public Player(int id, String name) {
         this.id = id;

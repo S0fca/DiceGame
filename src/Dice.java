@@ -4,7 +4,7 @@ import java.util.Objects;
 import java.util.Random;
 
 public class Dice {
-    Random r = new Random();
+    private final Random r = new Random();
     private ArrayList<Integer> diceNumbers;
 
     public Dice() {
@@ -170,15 +170,12 @@ public class Dice {
 
     /**
      * generates new numbers for dice and puts them in a list
-     *
-     * @return a list of 6 random numbers
      */
-    public ArrayList<Integer> generateDiceNumbers() {
+    public void generateDiceNumbers() {
         diceNumbers = new ArrayList<>(6);
         for (int i = 0; i < 6; i++) {
             diceNumbers.add(r.nextInt(6) + 1);
         }
-        return diceNumbers;
     }
 
     /**
@@ -189,8 +186,7 @@ public class Dice {
     public void replaceValue(int number) {
         try {
             diceNumbers.set(number, r.nextInt(6) + 1);
-        } catch (Exception e) {
-            System.out.println(e);
+        } catch (Exception ignore) {
         }
     }
 }
