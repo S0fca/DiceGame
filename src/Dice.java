@@ -4,6 +4,7 @@ import java.util.Objects;
 import java.util.Random;
 
 public class Dice {
+
     private final Random r = new Random();
     private ArrayList<Integer> diceNumbers;
 
@@ -27,7 +28,6 @@ public class Dice {
      * @return how many points the player got on the selected game
      */
     public int checkGameGetPoints(int gameNumber) {
-        System.out.println("gameNumber: " + gameNumber);
         if (gameNumber < 7) {
             return onesToSixes(gameNumber);
         } else if (gameNumber == 11 || gameNumber == 12) {

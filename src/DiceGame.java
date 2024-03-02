@@ -56,14 +56,10 @@ public class DiceGame {
      */
     public void setSelectedGame(String selectedGame) {
         if (isGameSelected()) {
-            System.out.println("Game has already been selected");
-            return;
+e            return;
         }
         if (isNotPlayed(selectedGame)) {
             this.selectedGame = selectedGame;
-            System.out.println(selectedGame);
-        } else {
-            System.out.println("Game has already been played");
         }
     }
 
@@ -161,7 +157,6 @@ public class DiceGame {
             playerOnTurn = 0;
         }
         addOrDeductTries(2);
-        System.out.println("\nGame NextPlayer: " + getPlayerOnTurn().getName());
         selectedGame = null;
     }
 
